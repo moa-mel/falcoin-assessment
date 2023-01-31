@@ -74,6 +74,9 @@
        margin-left: 70px ;
        font-size: 12px;
 }
+.wrapper .container .left .form-radio .remem{
+    color: #4B4A4A;
+}
 .wrapper .container .left button{
     width: 60%;
     background: #01C8FF;
@@ -100,7 +103,11 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 1rem;
+    padding: 0 1rem;
+    column-gap: 0.7rem;
+}
+.wrapper .container .left .left-acct .acct{
+    color: #4B4A4A;
 }
 .wrapper .container .left .left-acct .left-acct-lik{
     text-decoration: underline;

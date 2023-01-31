@@ -34,14 +34,13 @@ const Register = () => {
         />
        <div className='form-radio'>
         <input className="input-radio" type="checkbox" name="Remember me"  value="Remember me" />
-        Remember me
+       <p className='remem'> Remember me </p>
         </div>
-        <br/>
        <br/>
         <button>Sign up</button>
         </form>
         <div className='left-acct'>
-        <p>Already have an account?</p>
+        <p className='acct'>Already have an account?</p>
         <p className='left-acct-lik'>Sign in</p>
         </div>
       </div>
