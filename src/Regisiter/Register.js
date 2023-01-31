@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Register.css"
-
 import Logo from "../assets/logo.png"
 import Right from "../assets/right.png"
 
@@ -13,19 +12,23 @@ const Register = () => {
       <img className='logo' src={Logo} alt=""/>
       </div>
       <div className='left-paragh'>
-       <p className='create'>Create an account</p>
+       <h3 className='create'>Create an account</h3>
        <p className='reg'>Register on our website with your correct email address and information</p>
       <br/>
        <div className='left-form'>
       <form>
       <label>First Name  </label>
-        <input className="input-text" type='text'/>
+        <input className="input-text"
+         placeholder='Jeremaih' type='text'/>
         <label>Email</label>
-        <input className="input-text" type='email'/>
+        <input className="input-text"
+         placeholder='Fame@gmail.com' type='email'/>
         <label>Phone Number</label>
-        <input className="input-text" type='tel' pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
+        <input className="input-text" 
+        placeholder='+2348103769079' type='tel' pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
         <label>Password</label>
         <input 
+        placeholder=''
         className="input-text" 
         type='password'
         />
@@ -33,11 +36,13 @@ const Register = () => {
         <input className="input-radio" type="checkbox" name="Remember me"  value="Remember me" />
         Remember me
         </div>
+        <br/>
+       <br/>
         <button>Sign up</button>
         </form>
         <div className='left-acct'>
         <p>Already have an account?</p>
-        <p className='left-acct-lik'>sign in</p>
+        <p className='left-acct-lik'>Sign in</p>
         </div>
       </div>
        </div>

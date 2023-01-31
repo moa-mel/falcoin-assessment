@@ -1,18 +1,19 @@
 .wrapper{
-    
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
 .wrapper .container {
     align-items: center;
     justify-content: center;
     margin:  auto;
     display: flex;
-   
 }
 .wrapper .container .left{
     background-color:#E3ECFF;  
-    align-items: center;
-    justify-content: center;
-   
+    box-sizing: content-box; 
+    height: 100vh;
+    width: 70%;
 } 
 .wrapper .container .left .logo{
     align-items: center;
@@ -20,12 +21,13 @@
     margin: auto;
     display: block;
 }
-.wrapper .container .left .create{
+.wrapper .container .left h3{
     color: #0D0D26;
     display: block;
     text-align: left;
     width: 83%;
     margin: auto;
+    font-weight: normal;
 }
 .wrapper .container .left .reg{
     color: #4B4A4A;
@@ -48,9 +50,9 @@
     border: none;
     height: 2rem;
     width: 75%;
-    margin: auto;
+    margin-left: 70px ;
     margin-bottom: 1.5rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.3rem;
     font-size: small;
     color: #E3ECFF;
     border:1.5px solid #01C8FF;
@@ -69,12 +71,13 @@
 }
 .wrapper .container .left .form-radio{
        display: flex;
-       text-align: left;
+       margin-left: 70px ;
+       font-size: 12px;
 }
 .wrapper .container .left button{
-    width: 70%;
+    width: 60%;
     background: #01C8FF;
-    color: white;
+    color: #4B4A4A;
     display: block;
     border-radius: 10px ;
     border: 1px solid #01C8FF; 
@@ -105,17 +108,23 @@
 }
 .wrapper .container .right{
     background-color:#01C8FF;
-
     padding: 1rem;
-    width: 30%;
+    width: 40%;
+    height: 95vh;
 }
 .wrapper .container .right .right-Right{
-    
-    align-items: left;
-   
+    margin-left: -100px;
 }
 .wrapper .container .right .right-Right #right-Right-id{
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+}
+@media screen and (max-width: 500px) {
+    .wrapper .container .right{
+        display: none;
+    }
+    .wrapper .container .left{
+        width: 100%;
+    }
 }
