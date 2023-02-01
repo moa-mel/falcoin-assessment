@@ -1,11 +1,36 @@
-import React from 'react'
+import React, {useState }  from 'react'
 import "./Verify.css"
+import axios from "axios"
 import Right from "../assets/right.png"
 import Logo from "../assets/logo.png"
+import CodeInput from '../CodeInput/CodeInput'
+
 
 const Verify = () => {
+  const [success, setsuccess] = useState(false)
+  const [errorMsg, seterrorMsg] = useState(false)
+
+    
+  const handleSubmit = async code => {
+    await axios
+      .post(`https://falconlite.com/v1/api/verify-email`, { code })
+      .then(res => {
+        if (res.status === 200) {
+          setsuccess(true)
+        } else {
+          setsuccess(false)
+          seterrorMsg(res)
+        }
+      })
+      .catch(err => {
+        seterrorMsg(err.response.data.message)
+        setsuccess(false)
+      })
+  }
+
   return (
     <div className='wrapper'>
+    {!success ? (
       <div className='container'>
       <div className='lesser'>
       <div className='logo-img'>
@@ -16,29 +41,21 @@ const Verify = () => {
      <br/>
        <br/>
        <br/>
-     <div className='wrap-less'>
-      <form>
-        <input className='less-input' type="text" maxlenght="1"/>
-        <input className='less-input' type="text" maxlenght="1"/>
-        <input className='less-input' type="text" maxlenght="1"/>
-        <input className='less-input' type="text" maxlenght="1"/>
-        <input className='less-input' type="text" maxlenght="1"/>
-       <br/>
-       <br/>
-       <br/>
-       <br/>
-       <br/>
-       <br/>
-        <div>
-        <button>Proceed</button>
-        </div>
-        </form>
-        </div>
+        <CodeInput
+        onComplete={code => {
+          handleSubmit(code)
+        }}
+        />
         </div>
       <div className='right'>
       <img  id="right-Right-id" className='right-Right' src={Right} alt=""/>
       </div>
       </div>
+      ) : (
+        <div>
+        <p>Email verification successful</p>
+        </div>
+          )}
     </div>
   )
 }

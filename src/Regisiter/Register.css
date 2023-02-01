@@ -54,7 +54,7 @@
     margin-bottom: 1.5rem;
     padding: 0.2rem 0.3rem;
     font-size: small;
-    color: #E3ECFF;
+    color: #01C8FF;
     border:1.5px solid #01C8FF;
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
@@ -68,6 +68,32 @@
     outline: 0.5px solid #01C8FF;
     -webkit-box-shadow: 2px 2px 9px -2px #01C8FF;
             box-shadow: 2px 2px 9px -2px #01C8FF;
+}
+.wrapper .container .left .separate-pass{
+    display: flex;
+    height: 2rem;
+    width: 75%;
+    margin-left: 70px ;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 0.3rem;
+    font-size: small;
+  /*  color: #01C8FF; */
+    border:1.5px solid #01C8FF;
+}
+.wrapper .container .left .separate-pass .input-text {
+    outline: none;
+    background-color: transparent;
+    border: hidden;
+    height: 2rem;
+    width: 1000%;
+    margin-left: 10px ;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 0.3rem;
+}
+.wrapper .container .left .input-text .separate-pass span{
+    position: relative;
+    right: 6vh;
+    color: black;
 }
 .wrapper .container .left .form-radio{
        display: flex;
@@ -127,11 +153,13 @@
     -o-object-fit: cover;
        object-fit: cover;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .wrapper .container .right{
         display: none;
     }
     .wrapper .container .left{
-        width: 100%;
+        width: 700%;
+        background-color:#E3ECFF;
+        height: 100%;
     }
 }

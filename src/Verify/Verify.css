@@ -32,51 +32,7 @@
 .wrapper .container .lesser .ver-parag{
     color: #4B4A4A;
 }
-.wrapper .container .lesser .wrap-less{
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
-    align-items: center;
-}
-.wrapper .container .lesser .less-input{
-    width: 40px;
-    height: 60px;
-    font-size: 32px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    margin: 9px;
-    border:1.5px solid #01C8FF;
-    background-color:#E3ECFF;
-    font-weight: bold;
-    color: #01C8FF;
-    outline: none;
-    transition: all 0.1s;
-}
-.wrapper .container .lesser .less-input:focus{
-    outline: none;
-    border: none;
-}
-.wrapper .container .lesser .less-input:hover{
-    outline: 0.5px solid #01C8FF;
-    -webkit-box-shadow: 2px 2px 9px -2px #01C8FF;
-     box-shadow: 2px 2px 9px -2px #01C8FF;
-}
-.wrapper .container .lesser button{
-    width: 100%;
-    background: #01C8FF;
-    color: #4B4A4A;
-    display: block;
-    border-radius: 10px ;
-    border: 1px solid #01C8FF; 
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
+
 .wrapper .container .right{
     background-color:#01C8FF;
     padding: 1rem;
@@ -86,11 +42,13 @@
 .wrapper .container .right .right-Right{
     margin-left: -100px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .wrapper .container .right{
         display: none;
     }
     .wrapper .container .lesser{
         width: 100%;
+        background-color:#E3ECFF;
+        height: 100%;
     }
 }
